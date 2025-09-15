@@ -1,5 +1,5 @@
 # LAB-WEB-03-2025 Repository
-Selamat datang di repositori LAB-WEB-01-2025! Repositori ini adalah tempat pengumpulan tugas praktikum untuk mata kuliah Praktikum Pemrograman Web 2025. Berikut adalah panduan singkat untuk mengumpulkan tugas di repositori ini.
+Selamat datang di repositori LAB-WEB-03-2025! Repositori ini adalah tempat pengumpulan tugas praktikum untuk mata kuliah Praktikum Pemrograman Web 2025. Berikut adalah panduan singkat untuk mengumpulkan tugas di repositori ini.
 
 ## Tata Cara Pengumpulan (Commit)
 Berikut langkah-langkahnya:
@@ -12,7 +12,7 @@ git clone <url-repositori-hasil-fork>
 ```
 5. **Buat Cabang (Branch) Baru:** Masuk ke direktori repositori yang telah di-kloning. Lalu buat cabang sesuai nim masing-masing.
 ```bash
-cd LAB-WEB-01-2025
+cd LAB-WEB-03-2025
 git checkout -b H071241nnn # Sesuaikan dengan NIM masing-masing
 ```
 6. **Masuk ke Folder:** Masuk ke directory/folder sesuai NIM.
