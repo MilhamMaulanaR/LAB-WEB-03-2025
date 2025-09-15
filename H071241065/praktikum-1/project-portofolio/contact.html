@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="nav-container">
+        <h1 class="logo"><span class="logo-higlight">Ak</span>mal.</h1>
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-contact">
+      <!-- contact information -->
+      <section class="contact">
+        <div class="contact-items">
+          <h1 class="contact-info">Contact Info</h1>
+          <table>
+            <tbody>
+              <tr>
+                <td>Email</td>
+                <td>akmalrbc6@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Nomor telepon</td>
+                <td>085351445440</td>
+              </tr>
+              <tr>
+                <td>LinkedIn</td>
+                <td>
+                  <a
+                    href="https://www.linkedin.com/in/akmal-l-0365ab2b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    >Akmal</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Instagram</td>
+                <td>
+                  <a
+                    href="https://www.instagram.com/akmal_2yu?igsh=MWR3bmxkNXZoM3ZyaQ=="
+                    >akmal_2yu</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Github</td>
+                <td>
+                  <a
+                    href="https://github.com/Onlyadmirer?fbclid=PAb21jcAMyLr9leHRuA2FlbQIxMQABp9PTcZzqvIlfYWL_DotH2r4V7cYbHEgT4LyRSBgnd3ydHNtEVr9oaz23yqmv_aem_2Ph8OERuLotL_GV4At6asQ"
+                    >Onlyadmirer</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- contact form -->
+      <section class="contact-form">
+        <div class="form-container">
+          <h2>Contact Me</h2>
+          <form>
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama Anda"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="contoh@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telepon">Nomor Telepon</label>
+              <input
+                type="tel"
+                id="telepon"
+                name="telepon"
+                placeholder="081234567890"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Tipe Pesan</label>
+              <div class="radio-group">
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="pertanyaan"
+                    name="tipe_pesan"
+                    value="Pertanyaan"
+                    required
+                  />
+                  <label for="pertanyaan">Pertanyaan</label>
+                </div>
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="kritik"
+                    name="tipe_pesan"
+                    value="Kritik"
+                  />
+                  <label for="kritik">Kritik</label>
+                </div>
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="saran"
+                    name="tipe_pesan"
+                    value="Saran"
+                  />
+                  <label for="saran">Saran</label>
+                </div>
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="kerjasama"
+                    name="tipe_pesan"
+                    value="Kerjasama"
+                  />
+                  <label for="kerjasama">Kerjasama</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan Detail</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="5"
+                placeholder="Tuliskan pesan Anda di sini..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="persetujuan"
+                name="persetujuan"
+                value="setuju"
+                required
+              />
+              <label for="persetujuan"
+                >Saya setuju bahwa data yang saya kirimkan akan diproses sesuai
+                kebijakan privasi.</label
+              >
+            </div>
+
+            <button class="form-btn" type="submit">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footer-social-media">
+        <div class="footer-instagram">
+          <a
+            href="https://www.instagram.com/akmal_2yu?igsh=MWR3bmxkNXZoM3ZyaQ=="
+            ><img
+              src="/assets/instagram_icon.svg"
+              alt="instagram_icon"
+              class="instagram-icon"
+          /></a>
+        </div>
+        <div class="footer-github">
+          <a
+            href="https://github.com/Onlyadmirer?fbclid=PAb21jcAMyLr9leHRuA2FlbQIxMQABp9PTcZzqvIlfYWL_DotH2r4V7cYbHEgT4LyRSBgnd3ydHNtEVr9oaz23yqmv_aem_2Ph8OERuLotL_GV4At6asQ"
+            ><img
+              src="/assets/github_icon.svg"
+              alt="instagram_icon"
+              class="github-icon"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-items">
+        <p>&copy; 2025 Akmal. All Rights Reserved.</p>
+      </div>
+    </section>
+  </body>
+</html>

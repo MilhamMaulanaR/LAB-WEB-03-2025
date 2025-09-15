@@ -1,0 +1,471 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: #bebebeff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* header */
+.header {
+  background-color: #1e1e1eff;
+  position: fixed;
+  inset: 0;
+  height: 70px;
+  color: #bebebeff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #bebebeff;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  padding: 0 10px 0 10px;
+  max-width: 1280px;
+}
+
+.logo-higlight {
+  color: #14b8a6;
+}
+
+.navbar {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background-color: #303030ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-top: 70px;
+}
+
+.footer-social-media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-instagram {
+  overflow: hidden;
+}
+
+.instagram-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============== home =============== */
+
+/* hero section */
+.hero-section {
+  padding: 0 4px 0 4px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.foto-container {
+  height: 350px;
+  width: 350px;
+  border: 1px solid;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.bio {
+  width: 50%;
+}
+
+
+
+.nama {
+  font-size: 50px;
+  margin: -15px 0 -15px 0;
+}
+
+.motto {
+  margin-top: 30px;
+}
+
+/* bio singkat */
+.bio-singkat {
+  padding: 0 4px 0 4px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-items {
+  width: 80%;
+  background-color: #232323ff;
+  padding: 30px 50px 50px 50px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: white;
+}
+
+.stats {
+  font-size: 50px;
+  color: #14b8a6;
+}
+
+table {
+  width: 100%;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+td,
+th {
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+/* ============== contact ==================== */
+
+.main-contact {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-form {
+  padding: 40px;
+  width: 40%;
+}
+
+.form-container {
+  padding: 0 40px 0 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #232323ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.form-container h2 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #14b8a6;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 6px;
+}
+
+.form-group input,
+textarea {
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  background-color: #bebebeff;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-btn {
+  background-color: #14b8a6;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 80px;
+  color: #14b8a6;
+}
+
+/* =================== About ==================== */
+
+.about {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.about h1 {
+  color: #11a392ff;
+  font-size: 50px;
+  margin-bottom: -8px;
+}
+
+.personal-info-section {
+  margin-top: 90px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.personal-items {
+  text-align: center;
+  margin-top: 100px;
+  background-color: #232323ff;
+  padding: 50px;
+  border: none;
+  border-radius: 20px;
+}
+
+.personal-info {
+  color: #11a392ff;
+}
+
+.tentang-saya {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.judul-deskripsi {
+  color: #11a392ff;
+}
+
+.deskripsi {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* timeline pendidikan */
+
+.pendidikan-container {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-pendidikan {
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #232323ff;
+  padding: 30px 150px 30px 150px;
+  border: none;
+  border-radius: 20px;
+}
+
+.timeline-pendidikan dt {
+  font-size: 30px;
+  color: #11a392ff;
+}
+.timeline-pendidikan h1 {
+  font-size: 40px;
+  color: #11a392ff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.skils-hobbies {
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+/* skills */
+.skils-container {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.skil-items {
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #232323ff;
+  padding: 30px 150px 30px 150px;
+  border: none;
+  border-radius: 20px;
+}
+
+.skil-items h1 {
+  font-size: 40px;
+  color: #11a392ff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.skil-items ul {
+  font-size: 30px;
+}
+
+/* Hobbies */
+.hobbies-container {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.hoby-items {
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #232323ff;
+  padding: 30px 150px 30px 150px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.hoby-items h1 {
+  font-size: 40px;
+  color: #11a392ff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.hoby-items ul {
+  font-size: 30px;
+}
+
+/* ==================== tablet kebawah =========================== */
+@media (max-width: 768px) {
+  /*========= home ======== */
+  .hero-section {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  .hero-items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ========= About =========== */
+  .personal-info-section {
+    padding: 0 8px 0 8px;
+  }
+  .tentang-saya {
+    padding: 0 8px 0 8px;
+  }
+
+  .pendidikan-container {
+    padding: 0 8px 0 8px;
+  }
+
+  .skils-hobbies {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px 0 8px;
+  }
+
+  /* ========= Contact ============== */
+  .main-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px 0 8px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
