@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">NFA.MA</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About fahira</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <h2>Informasi Kontak</h2>
+        <style> 
+            #contact-info table a {
+            text-decoration: none; 
+            color: #090c0a;
+            font-weight: normal;
+            }
+        </style>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kategori</th>
+                        <th>Informasi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email</td>
+                        <td>nurulfahirah4@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon</td>
+                        <td>+62 878-6512-3905</td>
+                    </tr>
+                    <tr>
+                        <td>LinkedIn</td>
+                        <td><a href="https://www.linkedin.com/in/nurul-fakhira-amanah-m-adil-950914307/" target="_blank">Nurul Fakhira Amanah M.Adil</a></td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                        <td><a href="https://www.instagram.com/nurulfahirah4/" target="_blank">nurulfahirah4</a></td>
+                    </tr>
+                    <tr>
+                        <td>GitHub</td>
+                        <td><a href="https://github.com/fahira4" target="_blank">fahira4</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact-form">
+            <h2>Buat Pesan</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon" required>
+                </div>
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Tipe Pesan:</legend>
+                        <label><input type="radio" name="tipe_pesan" value="Pertanyaan" required> Pertanyaan</label>
+                        <label><input type="radio" name="tipe_pesan" value="Kritik" required> Kritik</label>
+                        <label><input type="radio" name="tipe_pesan" value="Saran" required> Saran</label>
+                        <label><input type="radio" name="tipe_pesan" value="Kerjasama" required> Kerjasama</label>
+                    </fieldset>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pesan">Detail Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" id="persetujuan" name="persetujuan" required>  Saya setuju data yang saya kirimkan akan digunakan sesuai kebijakan privasi.</label>
+                </div>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fakhira. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/nurul-fakhira-amanah-m-adil-950914307/">LinkedIn</a> | 
+            <a href="https://www.instagram.com/nurulfahirah4/">Instagram</a> | 
+            <a href="https://github.com/fahira4">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
