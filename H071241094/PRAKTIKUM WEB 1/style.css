@@ -1,0 +1,310 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #04203b;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.site-header nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;      
+  text-align: left;
+}
+
+.hero .profile-pic {
+  width: 200px;           
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.hero-content p {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.quick-stats {
+  padding: 2rem;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.quick-stats h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  text-align: left;
+}
+
+.quick-stats table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quick-stats th,
+.quick-stats td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.quick-stats th {
+  background: #003366;
+  color: white;
+}
+
+/* .contact-info {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #003366;
+} */
+
+.contact-info table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-info th,
+.contact-info td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-info th {
+  background: #003366;
+  color: white;
+  text-align: left;
+  width: 35%;
+}
+
+.contact-info td {
+  background: #fff;
+  word-break: break-word;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: left; 
+  color: #003366;
+  font-size: 1.6rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: 0.2s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #003366;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,51,102,0.3);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+  cursor: pointer;
+  color: #444;
+}
+
+.form-check label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* jarak kecil antara kotak dan teks */
+  font-size: 0.9rem;
+  color: #444;
+  cursor: pointer;
+  white-space: nowrap; /* biar tidak terpotong ke baris bawah */
+}
+
+.contact-form .btn {
+  background: #003366;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background: #0055aa;
+}
+
+.personal-info,
+.bio,
+.education,
+.skills,
+.hobbies {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.personal-info h2,
+.bio h2,
+.education h2,
+.skills h2,
+.hobbies h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  text-align: left;
+}
+
+.personal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.personal-table th,
+.personal-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.personal-table th {
+  background:#003366;
+  color: white;
+}
+
+.skills ul,
+.hobbies ol {
+  padding-left: 1.5rem;
+}
+
+.education dd{
+   text-indent: 2em;  
+}
+
+footer {
+  background: #010913;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
