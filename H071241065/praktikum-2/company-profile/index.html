@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <section
+      class="fixed inset-0 z-10 h-26 md:h-20 px-6 bg-gradient-to-r from-slate-900 to-slate-700 lg:px-8"
+    >
+      <div
+        class="text-slate-300 flex flex-col md:flex-row justify-center md:justify-between items-center h-full font-sans max-w-[1440px] gap-4 md:gap-0 mx-auto"
+      >
+        <h1 class="text-3xl font-bold">Ngoding.</h1>
+        <nav>
+          <ul class="flex flex-row gap-12 text-lg">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#ulasan">Ulasan</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- header -->
+    <section class="mt-32 md:mt-44">
+      <header>
+        <h1
+          class="text-left text-slate-800 md:text-center font-sans px-4 text-6xl/tight"
+        >
+          Tingkatkan Gaya Hidup Anda Bersama <br />
+          Kami di
+          <span class="text-6xl font-bold">Ngoding.</span>
+        </h1>
+      </header>
+    </section>
+
+    <!-- hero -->
+    <section class="px-4">
+      <div class="relative max-w-5xl mx-auto mt-20">
+        <img
+          src="./img/company.webp"
+          alt="company-image"
+          class="object-cover w-full h-full"
+        />
+        <div
+          class="md:absolute md:bottom-0 left-0 grid items-center w-full h-56 grid-cols-2 md:grid-cols-4 gap-0 mt-4 md:mt-0 text-center text-slate-800 md:text-white md:bg-slate-700/75"
+        >
+          <div>
+            <p class="text-5xl font-bold">80+</p>
+            <h2 class="mt-3 text-xl">Proyek selesai</h2>
+          </div>
+          <div>
+            <p class="text-5xl font-bold">15+</p>
+            <h2 class="mt-3 text-xl">Mitra</h2>
+          </div>
+          <div>
+            <p class="text-5xl font-bold">140+</p>
+            <h2 class="mt-3 text-xl">Karyawan</h2>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="mt-3 text-xl border-b-2 cursor-posans border-slate-600 md:border-slate-100 hover:text-slate-500 md:hover:text-slate-100"
+            >
+              Lihat Selengkapnya →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="max-w-[1440px] pt-30 mx-auto px-6">
+      <div class="flex flex-col gap-16">
+        <div class="space-y-4 text-center">
+          <h1 class="text-5xl font-bold">About</h1>
+          <p class="max-w-3xl mx-auto md:text-lg">
+            Kami merancang dan membangun aplikasi untuk berbagai platform. Mulai
+            dari website korporat yang responsif, aplikasi mobile (iOS &
+            Android) yang user-friendly, hingga integrasi perangkat Internet of
+            Things (IoT) yang canggih.<br />
+            Membantu bisnis Anda bertransformasi secara digital melalui solusi
+            website, IoT, dan mobile yang dirancang khusus untuk memenuhi
+            kebutuhan pasar.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="rounded-xl shadow-[0_0_20px_rgb(0,0,0,0.1)] p-7">
+            <i class="ri-star-s-fill ri-3x"></i>
+            <p class="mb-2 font-semibold text-2xl/normal">
+              Fokus pada Website, IOT & Mobile
+            </p>
+            <p class="text-base/loose">
+              Dengan tim ahli di bidang web, IoT, dan mobile, kami siap
+              mewujudkan ide Anda menjadi produk digital berkualitas tinggi yang
+              dapat diandalkan dan mudah digunakan oleh pengguna.
+            </p>
+          </div>
+          <div class="rounded-xl shadow-[0_0_20px_rgb(0,0,0,0.1)] p-7">
+            <i class="ri-money-dollar-circle-fill ri-3x"></i>
+            <p class="mb-2 font-semibold text-2xl/normal">Harga Terbaik</p>
+            <p class="text-base/loose">
+              Kami menawarkan harga yang kompetitif tanpa mengorbankan kualitas.
+              Dapatkan solusi teknologi terbaik dengan investasi yang efisien
+              dan transparan sesuai anggaran Anda.
+            </p>
+          </div>
+          <div class="rounded-xl shadow-[0_0_20px_rgb(0,0,0,0.1)] p-7">
+            <i class="ri-service-fill ri-3x"></i>
+            <p class="mb-2 font-semibold text-2xl/normal">
+              Pemeriksaan Secara Berkala
+            </p>
+            <p class="text-base/loose">
+              Kami memastikan aplikasi dan website Anda selalu dalam kondisi
+              prima dengan layanan pemeliharaan rutin, pembaruan keamanan, dan
+              pemeriksaan performa secara berkala.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ulasan -->
+    <section id="ulasan" class="max-w-[1440px] pt-30 mx-auto px-6">
+      <div class="flex flex-col gap-16 font-sans">
+        <div class="flex flex-col gap-4 text-center items-center">
+          <h1 class="text-5xl font-bold">Ulasan</h1>
+          <p class="max-w-3xl mx-auto md:text-lg">
+            Lihat apa kata para klien kami yang telah puas dengan layanan dan
+            hasil kerja kami.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/messi.jpeg"
+                  alt="bang_messi"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@bang_messi</a>
+            </div>
+            <p>
+              "Proses pengerjaannya cepat dan hasilnya luar biasa! Website
+              perusahaan kami sekarang jauh lebih modern dan responsif. Timnya
+              sangat profesional dan komunikatif. Sangat direkomendasikan!"
+            </p>
+          </div>
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/woman.jpg"
+                  alt="woman"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@woman_in</a>
+            </div>
+            <p>
+              "Aplikasi mobile yang mereka bangun benar-benar sesuai dengan visi
+              kami. Mereka tidak hanya coding, tapi juga memberikan banyak
+              masukan berharga selama proses pengembangan. Terima kasih banyak!"
+            </p>
+          </div>
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/hamster.jpg"
+                  alt="hamster"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@mr.hamster</a>
+            </div>
+            <p>
+              "Solusi IoT yang ditawarkan sangat inovatif dan membantu efisiensi
+              operasional kami. Timnya mampu menerjemahkan kebutuhan teknis kami
+              yang kompleks menjadi produk yang berfungsi sempurna."
+            </p>
+          </div>
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/dog.jpg"
+                  alt="dog"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@big_dog</a>
+            </div>
+            <p>
+              "Saya sangat terkesan dengan layanan purnajualnya. Setiap ada
+              kendala, tim support selalu sigap membantu. Layanan maintenance
+              berkalanya membuat website kami selalu aman dan up-to-date."
+            </p>
+          </div>
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/man.jpg"
+                  alt="man"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@great_man</a>
+            </div>
+            <p>
+              "Awalnya ragu karena harganya sangat kompetitif, tapi ternyata
+              kualitasnya melebihi ekspektasi. Mereka memberikan nilai terbaik
+              untuk setiap rupiah yang kami keluarkan. Sangat transparan!"
+            </p>
+          </div>
+          <div
+            class="bg-slate-100 border border-slate-300 rounded-lg p-8 gap-6 flex flex-col"
+          >
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-20 h-20 overflow-hidden rounded-full">
+                <img
+                  src="./img/cat.jpg"
+                  alt="cat"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <a href="#" class="text-xl">@catty</a>
+            </div>
+            <p>
+              "Sejak website baru diluncurkan, penjualan kami meningkat drastis.
+              Desain UI/UX-nya sangat ramah pengguna dan membuat pelanggan
+              betah. Investasi terbaik yang pernah kami lakukan."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- kontak -->
+    <section id="kontak" class="max-w-[1440px] pt-30 mx-auto px-6">
+      <div class="flex flex-col gap-16 max-w-3xl mx-auto items-center">
+        <div class="flex flex-col gap-4 text-center items-center">
+          <h1 class="text-5xl font-bold">Kontak</h1>
+          <p class="max-w-3xl mx-auto md:text-lg">
+            Kami siap membantu mewujudkan ide Anda. Hubungi kami untuk
+            konsultasi gratis atau pertanyaan lebih lanjut mengenai layanan
+            kami.
+          </p>
+        </div>
+        <form
+          class="flex flex-col gap-6 bg-slate-100 w-full p-12 rounded-xl border border-slate-300"
+        >
+          <div class="flex flex-col w-full">
+            <label for="nama" class="translate-x-2 text-lg">Nama</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Masukkan nama Anda"
+              required
+              class="rounded-full px-4 py-2 focus:ring-1 ring-slate-600 border border-slate-400 outline-none w-full"
+            />
+          </div>
+          <div class="flex flex-col w-full">
+            <label for="email" class="translate-x-2 text-lg">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="contoh@email.com"
+              required
+              class="rounded-full px-4 py-2 focus:ring-1 ring-slate-600 border border-slate-400 outline-none w-full"
+            />
+          </div>
+          <div class="flex flex-col w-full">
+            <label for="pesan" class="translate-x-2 text-lg">Pesan</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="5"
+              placeholder="Tuliskan pesan Anda di sini..."
+              required
+              class="rounded-lg px-4 py-2 focus:ring-1 ring-slate-600 border border-slate-400 outline-none w-full"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-slate-800 text-slate-300 text-lg rounded-full py-2 cursor-posans hover:bg-slate-700"
+          >
+            Kirim
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="mt-30 bg-gradient-to-r from-slate-900 to-slate-700 px-6">
+      <div class="max-w-[1440px] mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 max-w-4xl place-items-center mx-auto border-b border-slate-300 pt-8 md:pt-10"
+        >
+          <div class="w-full p-2 pb-8 md:w-1/3">
+            <h1 class="pb-2 text-4xl font-bold text-slate-200">Ngoding.</h1>
+            <h2 class="py-2 text-2xl font-bold text-slate-300">Hubungi Kami</h2>
+            <p class="text-slate-300">akmalrbc6@gmail.com</p>
+            <p class="text-slate-300">Jl. Kelapa tiga</p>
+            <p class="text-slate-300">Makassar</p>
+          </div>
+          <div class="w-full p-2 pb-8 md:w-1/3">
+            <h2 class="pb-4 text-xl font-bold text-white">Tautan</h2>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#" class="inline-block mb-3 hover:text-slate-300"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="inline-block mb-3 hover:text-slate-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#ulasan" class="inline-block mb-3 hover:text-slate-300"
+                  >Ulasan</a
+                >
+              </li>
+              <li>
+                <a href="#kontak" class="inline-block mb-3 hover:text-slate-300"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-10 flex flex-col items-center">
+          <div>
+            <a
+              href="https://www.instagram.com/akmal_2yu?igsh=MWR3bmxkNXZoM3ZyaQ=="
+            >
+              <i
+                class="ri-instagram-line ri-2x text-slate-300 hover:text-slate-400 cursor-posans"
+              ></i>
+            </a>
+            <a href="https://web.facebook.com/akmal.rbc.52?locale=id_ID">
+              <i
+                class="ri-facebook-circle-line ri-2x text-slate-300 hover:text-slate-400 cursor-posans"
+              ></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/akmal-l-0365ab2b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            >
+              <i
+                class="ri-linkedin-box-fill ri-2x text-slate-300 hover:text-slate-400 cursor-posans"
+              ></i>
+            </a>
+          </div>
+          <p class="text-slate-300">&copy; 2025 Akmal. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
