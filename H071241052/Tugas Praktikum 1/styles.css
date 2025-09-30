@@ -1,0 +1,117 @@
+/* Warna tema */
+:root {
+  --warna-utama: #d6a4f0;   /* Lavender pastel */
+  --warna-teks: #333;
+  --warna-background: #fdf6ff; /* Lembut banget */
+  --warna-aksen: #b07fcf;
+  --warna-footer: #f3e1ff;
+  
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--warna-background);
+  color: var(--warna-teks);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--warna-utama);
+  padding: 1em;
+  text-align: center;
+  color: white;
+  border-bottom: 5px solid var(--warna-aksen);
+}
+
+header h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--warna-footer);
+}
+
+main {
+  padding: 2em;
+}
+
+section {
+  background: white;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #e3c7f9;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid var(--warna-aksen);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+td, th {
+  border: 1px solid #d3b5f3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: var(--warna-aksen);
+}
+
+footer {
+  background-color: var(--warna-footer);
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  border-top: 3px solid var(--warna-aksen);
+}
+
+button, input, textarea {
+  border-radius: 10px;
+  border: 1px solid #caa1e0;
+  padding: 0.5em;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--warna-aksen);
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #9d6fc7;
+}
