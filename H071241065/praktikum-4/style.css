@@ -1,0 +1,251 @@
+/* Import Font dari Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+
+/* Reset dan Pengaturan Dasar */
+:root {
+  --green-table: #0a2a4a; /* Changed to a blue theme */
+  --dark-green-table: #05152a;
+  --card-red: #ff4d4d;
+  --card-blue: #4d8aff;
+  --card-green: #66cc66;
+  --card-yellow: #ffd633;
+  --card-black: #111;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Changed font to Roboto */
+  background-color: var(--green-table);
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Tata Letak Utama Permainan */
+.game-board {
+  width: 100%;
+  height: 100vh;
+  max-width: 1600px; /* Increased max-width for better spacing */
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "bot"
+    "table"
+    "player";
+  padding: 20px; /* Increased padding */
+  box-sizing: border-box;
+}
+
+/* Area Pemain (Bot dan User) */
+.player-area {
+  padding: 15px; /* Slightly increased padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bot-area {
+  grid-area: bot;
+}
+.user-area {
+  grid-area: player;
+}
+
+.player-area h2 {
+  margin: 10px 0; /* Increased margin */
+  font-weight: 600;
+  text-shadow: 1px 1px 4px black; /* Slightly stronger shadow */
+}
+
+.hand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Indikator Giliran */
+.turn-indicator {
+  position: absolute;
+  bottom: 0;
+  padding: 6px 18px; /* Slightly adjusted padding */
+  background-color: var(--card-blue); /* Changed color to blue */
+  color: white; /* Changed text color */
+  border-radius: 20px; /* More rounded */
+  font-weight: bold;
+  box-shadow: 0 0 12px var(--card-blue);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.player-area.active .turn-indicator {
+  opacity: 1;
+}
+.user-area .turn-indicator {
+  top: 0;
+  bottom: auto;
+}
+
+/* Desain Kartu */
+.card {
+  width: 90px; /* Increased card size */
+  height: 135px;
+  border-radius: 10px; /* More rounded corners */
+  border: 3px solid white; /* Thicker border */
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+  transition: transform 0.3s ease, margin 0.3s ease; /* Smoother transition */
+  margin-left: -45px; /* Adjusted overlap */
+}
+.hand-container .card:first-child {
+  margin-left: 0;
+}
+
+.user-area .card:hover {
+  transform: translateY(-25px) scale(1.1); /* Larger hover effect */
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Area Tengah (Meja) */
+.table-area {
+  grid-area: table;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* Increased gap */
+}
+
+.deck-pile,
+.discard-pile {
+  text-align: center;
+}
+
+#deck {
+  cursor: pointer;
+}
+
+/* Pastikan gambar kartu di discard pile tidak memiliki border atau background aneh */
+#discard-pile-card .card {
+  margin-left: 0;
+}
+
+/* Info Area */
+.info-action-area {
+  position: fixed;
+  bottom: 30px; /* Adjusted position */
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly more opaque */
+  padding: 20px; /* Increased padding */
+  border-radius: 15px; /* More rounded */
+  z-index: 100;
+}
+.info-action-area p {
+  margin: 8px 0; /* Adjusted margin */
+}
+#balance {
+  font-weight: bold;
+}
+#message-area {
+  margin-top: 15px;
+  color: var(--card-blue); /* Changed color to blue */
+  font-weight: bold;
+}
+
+/* Tombol Pass dan UNO */
+#pass-button,
+#uno-button {
+  margin-top: 15px; /* Increased margin */
+  padding: 10px 20px; /* Larger buttons */
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--card-blue); /* Changed to blue */
+  color: white; /* Changed text color */
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal / Pop-up */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+.modal-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--dark-green-table);
+  padding: 25px; /* Increased padding */
+  border-radius: 15px; /* More rounded */
+  text-align: center;
+}
+
+.color-picker {
+  display: flex;
+  gap: 15px; /* Increased gap */
+  margin-top: 15px;
+}
+.color-choice {
+  width: 70px; /* Larger color choices */
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid white; /* Thicker border */
+}
+
+/* Memberi warna pada setiap pilihan */
+.color-choice.red {
+  background-color: var(--card-red);
+}
+.color-choice.yellow {
+  background-color: var(--card-yellow);
+}
+.color-choice.green {
+  background-color: var(--card-green);
+}
+.color-choice.blue {
+  background-color: var(--card-blue);
+}
+
+#game-over-modal button {
+  margin-top: 20px; /* Increased margin */
+  padding: 12px 24px; /* Larger button */
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--card-blue); /* Changed to blue */
+}
+
+#win-modal .modal-content {
+  background-color: var(--card-blue); /* Changed to blue */
+}
