@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar Teknologi Masa Depan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">TechWebinar</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-500">Beranda</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-500">Tentang</a>
+                <a href="#features" class="text-gray-600 hover:text-blue-500">Fitur</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500">Kontak</a>
+            </div>
+            <button class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="bg-blue-600 text-white text-center py-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-extrabold mb-4">Webinar Teknologi Masa Depan</h1>
+            <p class="text-xl mb-8">Bergabunglah dengan para ahli untuk membahas tren teknologi terkini.</p>
+            <a href="#contact" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition duration-300">Daftar Sekarang</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Tentang Webinar Ini</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Webinar ini dirancang untuk memberikan wawasan mendalam tentang perkembangan terbaru di dunia teknologi, mulai dari kecerdasan buatan, blockchain, hingga komputasi kuantum. Acara ini cocok untuk developer, mahasiswa, dan siapa saja yang tertarik dengan masa depan teknologi.
+            </p>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Apa yang Akan Anda Dapatkan?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold mb-2">Sesi Interaktif</h3>
+                    <p class="text-gray-600">Tanya jawab langsung dengan para pembicara ahli di bidangnya.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold mb-2">Materi Eksklusif</h3>
+                    <p class="text-gray-600">Dapatkan akses ke slide presentasi dan rekaman video setelah acara.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold mb-2">Jaringan Profesional</h3>
+                    <p class="text-gray-600">Kesempatan untuk terhubung dengan para profesional dan peserta lain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Kata Mereka yang Pernah Ikut</h2>
+            <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+                 <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-1">
+                    <p class="text-gray-600 mb-4">"Acaranya sangat membuka wawasan. Pembicaranya juga sangat kompeten. Sangat direkomendasikan!"</p>
+                    <p class="font-bold text-gray-800">- Budi, Developer</p>
+                </div>
+                 <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-1">
+                    <p class="text-gray-600 mb-4">"Materi yang disampaikan sangat relevan dengan perkembangan industri saat ini. Saya jadi lebih siap menghadapi tantangan ke depan."</p>
+                    <p class="font-bold text-gray-800">- Ani, Mahasiswa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Tertarik untuk Bergabung?</h2>
+            <p class="mb-8 max-w-xl mx-auto">Daftarkan diri Anda sekarang juga untuk mengamankan tempat Anda. Cukup isi form di bawah ini!</p>
+            <div class="w-full max-w-lg mx-auto bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block text-left mb-2 font-bold">Nama Lengkap</label>
+                        <input type="text" id="name" class="w-full p-3 border rounded-lg" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-left mb-2 font-bold">Alamat Email</label>
+                        <input type="email" id="email" class="w-full p-3 border rounded-lg" placeholder="Masukkan email Anda">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Kirim Pendaftaran</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 TechWebinar. Semua Hak Cipta Dilindungi.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-blue-400">Facebook</a>
+                <a href="#" class="hover:text-blue-400">Twitter</a>
+                <a href="#" class="hover:text-blue-400">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
