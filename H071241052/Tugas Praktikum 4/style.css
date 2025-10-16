@@ -1,0 +1,360 @@
+/* ==================================== */
+/* GLOBAL & BASE STYLES - NEON GLITCH */
+/* ==================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier Prime', monospace; /* Font monospace/futuristik */
+}
+
+/* Latar Belakang Gelap Total */
+body {
+    margin: 0;
+    background-color: #000000;
+    background-image: url('background/circuit_pattern_dark.png'); /* Opsional: Pola sirkuit gelap */
+    color: #00ff00; /* Warna teks default: Neon Hijau */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    text-shadow: 0 0 5px #00ff00; /* Efek glow pada teks */
+}
+
+/* Animasi Fade In -> Glitch In */
+.fade-body {
+    opacity: 0;
+    animation: glitchIn 1.5s ease forwards;
+}
+
+@keyframes glitchIn {
+    0% { opacity: 0; transform: skewX(10deg); }
+    50% { opacity: 0.5; transform: skewX(-5deg); }
+    100% { opacity: 1; transform: skewX(0); }
+}
+
+/* Warna Neon (untuk digunakan di JS dan Glow) */
+.neon-red { color: #ff073a; text-shadow: 0 0 10px #ff073a; }
+.neon-blue { color: #00c7ff; text-shadow: 0 0 10px #00c7ff; }
+.neon-green { color: #00ff66; text-shadow: 0 0 10px #00ff66; }
+.neon-yellow { color: #ffeb00; text-shadow: 0 0 10px #ffeb00; }
+
+/* ==================================== */
+/* CONTAINER & HEADER */
+/* ==================================== */
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px);
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    text-align: center;
+    padding: 10px;
+}
+header {
+    border-bottom: 2px solid #00ff00;
+}
+footer {
+    border-top: 2px solid #00ff00;
+}
+
+#game-title {
+    font-size: 44px;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ffeb00, 0 0 5px #ffeb00; /* Glow emas/kuning */
+}
+
+#saldo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00c7ff; /* Neon biru */
+    text-shadow: 0 0 8px #00c7ff;
+    margin-top: 10px;
+}
+
+/* ==================================== */
+/* MAIN AREA & KARTU (PERBAIKAN LAYOUT AKHIR) */
+/* ==================================== */
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* Memberi sedikit ruang antara elemen */
+    justify-content: space-around; 
+    align-items: center;
+    padding: 5px 0; 
+    min-height: 0;
+}
+
+.player-label {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: 5px; 
+    color: #ff073a; 
+    text-shadow: 0 0 8px #ff073a;
+}
+
+.card-row {
+    display: flex;
+    gap: 5px; 
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px; 
+}
+
+/* AREA BOT (DIKORBANKAN/DIPERSINGKAT) */
+#bot-area {
+    /* Batasi tinggi maksimum area bot agar tidak memakan ruang main */
+    max-height: 18vh; /* DIKORBANKAN: Hanya 18% tinggi viewport */
+    width: 100%;
+    text-align: center;
+    overflow-y: auto; 
+    /* Set flex-shrink yang lebih besar agar bot lebih banyak menyusut */
+    flex-shrink: 1;
+}
+#bot-cards {
+    padding-bottom: 5px;
+}
+/* Hilangkan scrollbar bot area (opsional) */
+#bot-area::-webkit-scrollbar, #bot-cards::-webkit-scrollbar { display: none; }
+#bot-area { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* KARTU PEMAIN (AREA PENTING) */
+#player-area {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px; 
+    min-height: 0;
+    /* Alokasikan ruang tumbuh paling besar di flexbox main (prioritas) */
+    flex-grow: 2; 
+}
+
+#player-cards {
+    /* Batasi max-height (30% dari viewport height) */
+    max-height: 30vh; 
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+#player-cards::-webkit-scrollbar { display: none; }
+
+/* Area Tengah (kartu buangan dan deck) */
+#middle-area {
+    /* Porsi standar, tidak tumbuh dan tidak menyusut */
+    flex-grow: 0; 
+    flex-shrink: 0;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+
+/* Kartu Placeholder (MENGECILKAN UKURAN KARTU) */
+.card-row img, #top-card, #deck {
+    width: 75px; /* DIKECILKAN: Dari 85px menjadi 75px */
+    border-radius: 4px; 
+    border: 3px solid #00ff00; 
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+    transition: all 0.2s ease;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+/* Kartu Pemain - Hover Effect */
+#player-cards img:hover {
+    transform: translateY(-10px) scale(1.05); /* Sesuaikan translasi */
+    box-shadow: 0 0 15px #00c7ff, 0 0 5px #00c7ff; 
+    border-color: #00c7ff;
+    cursor: pointer;
+}
+
+
+#deck-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#top-card, #deck {
+    width: 85px; /* Sesuaikan ukuran kartu di tengah agar proporsional */
+}
+#deck {
+    cursor: pointer;
+}
+
+/* ==================================== */
+/* FOOTER (STATUS) */
+/* ==================================== */
+
+footer {
+    flex-shrink: 0; 
+    padding: 8px 10px; 
+}
+
+#status {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate; 
+    margin: 0; 
+}
+
+@keyframes pulse {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 10px currentColor; }
+}
+
+
+/* ==================================== */
+/* TOMBOL & KONTROL */
+/* ==================================== */
+
+/* Mengurangi ukuran padding vertikal tombol di tengah */
+.neon-btn {
+    padding: 8px 18px; /* DIKECILKAN: Dari 10px 20px menjadi 8px 18px */
+    font-size: 15px; /* Sedikit dikecilkan */
+    /* ... properti lain tetap ... */
+    background: transparent;
+    color: #00ff66;
+    border: 2px solid #00ff66;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #00ff66;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    text-transform: uppercase;
+}
+
+.neon-btn:hover:enabled {
+    background-color: rgba(0, 255, 102, 0.15);
+    box-shadow: 0 0 15px #00ff66, 0 0 5px #00ff66;
+    transform: scale(1.05);
+}
+
+.neon-btn:active {
+    transform: scale(0.98);
+}
+
+.neon-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #444;
+    box-shadow: none;
+}
+
+/* Draw Button Tengah (Warna Khusus) */
+#draw-btn-middle {
+    color: #ffeb00;
+    border-color: #ffeb00;
+    box-shadow: 0 0 5px #ffeb00;
+}
+#draw-btn-middle:hover:enabled {
+    background-color: rgba(255, 235, 0, 0.15);
+    box-shadow: 0 0 15px #ffeb00, 0 0 5px #ffeb00;
+}
+
+/* UNO & Call UNO Buttons */
+.uno-btn-style, .call-uno-btn-style {
+    color: #ff073a;
+    border-color: #ff073a;
+    box-shadow: 0 0 5px #ff073a;
+}
+.uno-btn-style:hover:enabled, .call-uno-btn-style:hover:enabled {
+    background-color: rgba(255, 7, 58, 0.15);
+    box-shadow: 0 0 15px #ff073a, 0 0 5px #ff073a;
+}
+
+/* Side Controls & Input */
+#side-controls {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+#taruhan {
+    background-color: #111;
+    color: #00ff66;
+    border: 1px solid #00c7ff;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 5px #00c7ff;
+}
+
+
+/* ==================================== */
+/* MODAL GLITCH */
+/* ==================================== */
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+.glitch-box {
+    background: #000000;
+    color: #00ff66;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: center;
+    border: 3px solid #ff073a; 
+    box-shadow: 0 0 20px #ff073a, inset 0 0 5px #ff073a;
+    animation: boxGlitch 1s infinite alternate;
+}
+
+@keyframes boxGlitch {
+    0% { transform: translate(0); }
+    30% { transform: translate(-1px, 1px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+#modal-box p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #00c7ff;
+}
+
+#modal-box div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#modal-box button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: #111;
+    border: 2px solid #00c7ff;
+    color: #00c7ff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00c7ff;
+    transition: 0.1s;
+}
+
+#modal-box button:hover {
+    background-color: rgba(0, 199, 255, 0.2);
+}
