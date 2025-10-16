@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanti Juga Kelar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-[#4B5320] text-white shadow sticky top-0 z-20">
+    <div class="flex items-center gap-3">
+      <h1 class="text-2xl font-bold">🐢 Nanti Juga Kelar</h1>
+    </div>
+    <button id="menu-button" class="md:hidden text-2xl">
+      ☰
+    </button>
+    <ul id="menu-list" class="hidden md:flex gap-4 text-sm font-medium">
+      <li><a href="#beranda" class="hover:underline">Beranda</a></li>
+      <li><a href="#tentang" class="hover:underline">Tentang</a></li>
+      <li><a href="#fitur" class="hover:underline">Fitur</a></li>
+      <li><a href="#testimoni" class="hover:underline">Testimoni</a></li>
+      <li><a href="#kontak" class="hover:underline">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-[#4B5320] text-white py-4 z-20">
+    <ul class="flex flex-col items-center gap-4 text-lg">
+      <li><a href="#beranda" class="hover:underline p-2 block w-full text-center">Beranda</a></li>
+      <li><a href="#tentang" class="hover:underline p-2 block w-full text-center">Tentang</a></li>
+      <li><a href="#fitur" class="hover:underline p-2 block w-full text-center">Fitur</a></li>
+      <li><a href="#testimoni" class="hover:underline p-2 block w-full text-center">Testimoni</a></li>
+      <li><a href="#kontak" class="hover:underline p-2 block w-full text-center">Kontak</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <header id="beranda"
+    class="relative text-center text-white py-24 px-6 bg-cover bg-center bg-no-repeat bg-[url('Tugas-numpuk.jpeg')]">
+    <div class="absolute inset-0 bg-[#4B5320]/70"></div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 drop-shadow">Nanti Juga Kelar</h2>
+      <p class="text-md sm:text-lg md:text-xl mb-6 italic drop-shadow-md">
+        Kami tidak menyelesaikan tugasmu. Kami hanya menundanya dengan penuh gaya. 🐢
+      </p>
+      <a href="#kontak" class="bg-[#FACC15] hover:bg-yellow-300 text-gray-900 px-6 py-3 rounded-full font-bold transition">
+        Tunda Sekarang
+      </a>
+    </div>
+  </header>
+
+  <!-- Tentang -->
+  <section id="tentang" class="py-16 px-6 bg-white text-center">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#4B5320]">Tentang Kami</h3>
+    <p class="max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+      "Nanti Juga Kelar" adalah layanan digital kreatif yang membantu kamu menunda tugas dengan cara yang tidak biasa.
+      Mulai dari template alasan yang meyakinkan, sampai trik PDF rusak palsu — kami ada di sini bukan untuk menyelesaikan masalah,
+      tapi untuk memperpanjang waktu menghadapi masalah.
+    </p>
+  </section>
+
+  <!-- Fitur -->
+  <section id="fitur" class="bg-[#FACC15]/20 py-16 px-6 text-center">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-[#4B5320]">Layanan Kami</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-transform hover:-translate-y-2">
+        <h4 class="text-xl font-bold mb-2 text-[#FACC15]">📝 Template Alasan</h4>
+        <p>Alasan klasik, kreatif, hingga spiritual. Siap pakai untuk WhatsApp atau Google Meet.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-transform hover:-translate-y-2">
+        <h4 class="text-xl font-bold mb-2 text-[#FACC15]">💻 PDF Rusak Elegan</h4>
+        <p>File palsu yang tampak rusak tapi meyakinkan. Bisa dikirim ke dosen dengan percaya diri.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-transform hover:-translate-y-2">
+        <h4 class="text-xl font-bold mb-2 text-[#FACC15]">⏳ Timer Mundur</h4>
+        <p>Simulasi waktu berjalan lambat agar kamu merasa masih ada waktu. Bohong sih, tapi manjur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="bg-white py-16 px-6 text-center">
+    <h3 class="text-2xl md:text-3xl font-bold mb-10 text-[#4B5320]">Apa Kata Mereka</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+      <div class="bg-[#4B5320] text-white p-6 rounded-lg shadow-md">
+        <blockquote class="italic mb-4">“Gara-gara layanan ini, aku baru ngumpulin tugas 3 minggu telat... tapi tetap lulus. Ajaib!”</blockquote>
+        <p class="font-semibold">– Budi, Mahasiswa Kritis</p>
+      </div>
+      <div class="bg-[#FACC15] text-gray-900 p-6 rounded-lg shadow-md">
+        <blockquote class="italic mb-4">“Saya nggak ngerjain tugas. Tapi kok malah dapat asistensi? Bingung, tapi senang.”</blockquote>
+        <p class="font-semibold">– Kunto, Pejuang Afirmasi Kosmik</p>
+      </div>
+      <div class="bg-[#3B4520] text-white p-6 rounded-lg shadow-md">
+        <blockquote class="italic mb-4">“Dosenku sampai kasihan, sukses besar.”</blockquote>
+        <p class="font-semibold">– Vina, Pengundurin Diri Profesional</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Kontak -->
+  <section id="kontak" class="bg-[#FACC15]/20 py-16 px-6 text-center">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-[#4B5320]">Butuh Alasan Sekarang?</h3>
+    <form class="max-w-lg mx-auto space-y-4">
+      <input type="text" placeholder="Nama malasmu" class="w-full p-3 border border-gray-300 rounded" required />
+      <input type="email" placeholder="Email (kalau sempat)" class="w-full p-3 border border-gray-300 rounded" required />
+      <textarea placeholder="Ceritakan tugas apa yang ingin kamu tunda..." class="w-full p-3 border border-gray-300 rounded" rows="4"></textarea>
+      <button class="bg-[#FACC15] hover:bg-yellow-400 text-gray-900 py-3 px-6 rounded font-semibold transition" type="submit">
+        Kirim Alasan
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#4B5320] text-center py-6 text-white">
+    <p>© 2025 Nanti Juga Kelar. Semua Hak Ditunda.</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:underline">Instagram</a>
+      <a href="#" class="hover:underline">TikTok</a>
+      <a href="#" class="hover:underline">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- Script Toggle Mobile Menu -->
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
