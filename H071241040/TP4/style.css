@@ -1,0 +1,134 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root{
+      --card-w: clamp(64px, 7vw, 100px);
+      --shadow: 0 2px 5px rgba(0,0,0,.5);
+      --bg:#333; --surface:#222; --panel:#1b1b1b; --text:#fff;
+      --muted:#cfcfcf; --accent:#22c55e; --danger:#ff4757;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;
+      background:var(--bg); color:var(--text);
+      margin:0; min-height:100vh; display:flex; flex-direction:column;
+      overflow-x:hidden;
+    }
+    header.game-info{ text-align:center; padding:12px 10px; background:var(--surface); }
+    header.game-info h1{ margin:0; font-weight:800; letter-spacing:.3px }
+
+    /* ===== Layout 2 kolom ===== */
+    #layout{
+      flex:1; display:grid; grid-template-columns: 1fr 300px;
+      gap:12px; padding:12px;
+    }
+    #board{
+      display:flex; flex-direction:column; justify-content:space-between;
+      border-radius:12px; overflow:hidden; transition:background-color .5s ease;
+    }
+    /* Warna latar papan mengikuti warna aktif */
+    .active-color-red    { background:#5c1c1c; }
+    .active-color-green  { background:#2b5c2b; }
+    .active-color-blue   { background:#1c3a5c; }
+    .active-color-yellow { background:#5c551c; }
+
+    .hand-area{
+      display:flex; justify-content:center; align-items:center;
+      min-height:200px; padding-inline:10px;
+      overflow-x:auto; overflow-y:visible; scroll-behavior:smooth;
+      position:relative; z-index:1;
+    }
+    .center-area{
+      display:flex; justify-content:center; align-items:center;
+      gap:20px; min-height:150px;
+    }
+
+    /* ===== Kartu ===== */
+    .card{
+      width:var(--card-w); aspect-ratio:80/112; height:auto;
+      margin:0 4px; border-radius:10px; cursor:pointer;
+      transition:transform .18s, box-shadow .18s, outline-color .18s;
+      box-shadow:var(--shadow); position:relative;
+    }
+    #player-hand .card:not(.unplayable){
+      box-shadow:0 0 0 2px rgba(255,255,255,.14), var(--shadow);
+    }
+    #player-hand .card:hover{
+      transform:translateY(-12px) scale(1.04);
+      box-shadow:0 10px 18px rgba(0,0,0,.45), 0 0 0 2px rgba(255,255,255,.22) inset;
+      z-index:10;
+    }
+    .card.unplayable{ opacity: 0.5; cursor:not-allowed; }
+    #bot-hand .card{ cursor:default; }
+    #deck-pile img{
+      width:var(--card-w); aspect-ratio:80/112; height:auto; cursor:pointer;
+      outline:2px solid transparent;
+    }
+    #deck-pile img:hover{ outline-color:rgba(255,255,255,.25); }
+    #discard-pile .card{ cursor:default; }
+
+    /* Auto mengecil jika terlalu banyak */
+    #player-hand.too-many .card, #bot-hand.too-many .card { width:60px; height:84px; }
+    #player-hand.too-many .card:hover { transform: translateY(-10px) scale(1.05); }
+
+    /* ===== Sidebar kanan ===== */
+    #right-bar .panel{
+      background:var(--panel); color:#fff; border-radius:12px; padding:14px;
+      box-shadow:0 8px 24px rgba(0,0,0,.35); position:sticky; top:12px;
+    }
+    #right-bar h3{ margin:0 0 10px; font-size:1.1rem }
+    #right-bar .stat{
+      display:flex; align-items:center; justify-content:space-between;
+      background:rgba(255,255,255,.06);
+      padding:8px 10px; border-radius:8px; margin-bottom:8px; font-weight:600;
+    }
+    .bet-label{ display:block; margin-top:8px; font-size:.9rem; color:#ddd }
+    .bet-row{ display:flex; gap:8px; margin-top:6px; }
+    .bet-row input{
+      flex:1; padding:8px 10px; border-radius:8px; border:1px solid #333;
+      background:#111; color:#fff;
+    }
+    button.primary{
+      padding:8px 12px; border:0; border-radius:8px;
+      background:var(--accent); color:#0a0a0a; font-weight:800; cursor:pointer;
+    }
+    button.primary:hover{ filter:brightness(1.07) }
+
+    .uno-btn{
+      width:100%; margin-top:10px; padding:14px 18px;
+      font-size:18px; font-weight:900; border:0; border-radius:999px; cursor:pointer;
+      background:var(--danger); color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.4);
+    }
+    .uno-btn.hidden{ display:none }
+
+    .log-title{ margin:14px 0 6px; font-size:.95rem; opacity:.9 }
+    .log{
+      height:220px; overflow:auto; border:1px solid #2a2a2a; border-radius:8px;
+      background:#0f0f0f; padding:8px; font-size:.92rem; line-height:1.35;
+    }
+    .log .item{ padding:4px 6px; border-bottom:1px dashed rgba(255,255,255,.08) }
+    .log .item:last-child{ border-bottom:0 }
+
+    /* ===== Modal ===== */
+    .modal-overlay{
+      position:fixed; inset:0; background:rgba(0,0,0,.7);
+      display:none; justify-content:center; align-items:center; z-index:1000;
+    }
+    .modal-overlay.active{ display:flex; }
+    .modal-content{
+      background:#fff; color:#333; padding:24px 28px; border-radius:12px; text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,.3); max-width:360px; width:90%;
+    }
+    .modal-content button{
+      padding:10px 16px; border:0; border-radius:8px; background:var(--accent); color:#0a0a0a; font-weight:800; cursor:pointer;
+    }
+    .color-options{ display:flex; gap:10px; margin-top:16px; justify-content:center; }
+    .color-box{ width:52px; height:52px; border-radius:8px; cursor:pointer; }
+    .color-box.red{ background:#ff5555; } .color-box.green{ background:#55aa55; }
+    .color-box.blue{ background:#5555ff; } .color-box.yellow{ background:#ffaa00; }
+
+    /* ===== Responsif ===== */
+    @media (max-width: 900px){
+      #layout{ grid-template-columns: 1fr; }
+      #right-bar{ order:3; }
+      .hand-area{ min-height:140px; }
+    }
