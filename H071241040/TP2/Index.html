@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AlanStack</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+  @theme {
+    /* Brand colors -> dipakai oleh bg-brand-*, text-brand-* */
+    --color-brand-lightest: #f5f7ff;
+    --color-brand-lighter:  #e9edff;
+    --color-brand-light:    #cfd7ff;
+    --color-brand-soft:     #a5b4ff;
+    --color-brand-base:     #5b6cff;
+    --color-brand-utama:    #3f4ef6;
+    --color-brand-hover:    #2f3cd0;
+    --color-brand-dark:     #262fa8;
+    --color-brand-darkest:  #1f2785;
+
+    --shadow-soft: 0 10px 30px -10px rgba(0,0,0,.15);
+
+    @keyframes marquee {
+      0%   { transform: translateX(100%) }
+      100% { transform: translateX(-100%) }
+    }
+    --animate-marquee: marquee 22s linear infinite;
+  }
+</style>
+
+
+</head>
+<body class="min-h-screen antialiased text-slate-700 bg-white selection:bg-brand-light/60 selection:text-brand-darkest">
+  <!-- ============ TOP BAR ============ -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-200">
+    <input id="navToggle" type="checkbox" class="peer sr-only" aria-hidden="true" />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="inline-flex items-center gap-2 font-semibold text-slate-950">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-utama text-white shadow-soft">A</span>
+          <span class="text-lg tracking-tight">AlanStack</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#about" class="hover:text-brand-hover">Tentang</a>
+          <a href="#features" class="hover:text-brand-hover">Fitur</a>
+          <a href="#showcase" class="hover:text-brand-hover">Showcase</a>
+          <a href="#pricing" class="hover:text-brand-hover">Harga</a>
+          <a href="#faq" class="hover:text-brand-hover">FAQ</a>
+          <a href="#contact" class="hover:text-brand-hover">Kontak</a>
+          <a href="#cta" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-utama text-white shadow-soft hover:bg-brand-hover">Mulai</a>
+        </nav>
+
+        <!-- Mobile -->
+        <input id="navToggle" type="checkbox" class="peer sr-only" aria-hidden="true" />
+        <label for="navToggle" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 hover:border-brand-base" aria-label="Buka menu">
+        <!-- ikon hamburger -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995" stroke-width="1"/></svg>
+        </svg>
+      </label>
+    </div>
+  </div>
+
+    <!-- Mobile Drawer -->
+    <div class="md:hidden hidden peer-checked:block border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 grid gap-3 text-sm">
+      <a href="#about" class="py-2">Tentang</a>
+      <a href="#features" class="py-2">Fitur</a>
+      <a href="#showcase" class="py-2">Showcase</a>
+      <a href="#pricing" class="py-2">Harga</a>
+      <a href="#faq" class="py-2">FAQ</a>
+      <a href="#contact" class="py-2">Kontak</a>
+      <a href="#cta" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-brand-utama text-white shadow-soft hover:bg-brand-hover">Mulai</a>
+    </div>
+  </div>
+</header>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="relative"> 
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-brand-light bg-brand-lightest px-2 py-2 text-xs text-brand-dark">Serbaguna & Cepat Dipakai</span>
+          <h1 class="mt-4 text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight text-slate-950">
+           <span class="text-brand-hover">WePro: </span>  Website Profesional untuk Bisnis & Personal Anda 
+          </h1>
+          <p class="mt-5 text-slate-utama text-base sm:text-lg">
+            Cepat, responsif, dan sesuai kebutuhan. Dari landing page sederhana hingga website bisnis lengkap.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#cta" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-utama text-white shadow-soft hover:bg-brand-hover">
+              Mulai Sekarang
+              <svg xmlns="http://www.w3.org/light0/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#showcase" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:border-brand-base">
+              Lihat Demo
+              <svg xmlns="http://www.w3.org/light0/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/></svg>
+            </a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-xs text-slate-500">
+            <div class="inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Ringan</div>
+            <div class="inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-sky-400"></span> Responsif</div>
+            <div class="inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-violet-400"></span> Siap Produksi</div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-brand-light p-2 shadow-soft">
+            <div class="h-full w-full rounded-xl overflow-hidden bg-white flex items-center justify-center">
+              <img src="https://www.soocadigital.com/wp-content/uploads/2022/04/Desain-Website.png" alt="Hero preview" class="h-full w-full object-cover"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGOS / SOCIAL PROOF ============ -->
+<section aria-label="Logo strip" class="py-8 border-y border-slate-200 bg-white/60">
+  <div class="overflow-hidden">
+    <div class="flex items-center gap-12 animate-marquee">
+      <img class="h-10" src="https://miro.medium.com/v2/resize:fit:1400/1*xkvjbVykgUr8I3nZntymsg.png" alt="Logo 1"/>
+      <img class="h-10" src="https://cdn.rswebsols.com/wp-content/uploads/2022/09/Laravel-PHP-framework-logo-630x234.png?strip=all&lossy=1&ssl=1" alt="Logo 2"/>
+      <img class="h-10" src="https://www.nicepng.com/png/full/352-3529769_html5-course-training-content-details-logo-html-5.png" alt="Logo 3"/>
+      <img class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/2560px-Go_Logo_Blue.svg.png" alt="Logo 4"/>
+      <img class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png" alt="Logo 5"/>
+      <img class="h-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-uhJnlq5JG3qS0BPTZEPD3V5GjHlTEJYy6a7j3TVsoh58-AsPcYt0bYkX9a-YZlNrQA&usqp=CAU" alt="Logo 6"/>
+      <img class="h-12" src="https://miro.medium.com/v2/resize:fit:1400/1*xkvjbVykgUr8I3nZntymsg.png" alt="Logo 1"/>
+      <img class="h-10" src="https://cdn.rswebsols.com/wp-content/uploads/2022/09/Laravel-PHP-framework-logo-630x234.png?strip=all&lossy=1&ssl=1" alt="Logo 2"/>
+      <img class="h-10" src="https://www.nicepng.com/png/full/352-3529769_html5-course-training-content-details-logo-html-5.png" alt="Logo 3"/>
+      <img class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/2560px-Go_Logo_Blue.svg.png" alt="Logo 4"/>
+      <img class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png" alt="Logo 5"/>
+      <img class="h-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-uhJnlq5JG3qS0BPTZEPD3V5GjHlTEJYy6a7j3TVsoh58-AsPcYt0bYkX9a-YZlNrQA&usqp=CAU" alt="Logo 6"/>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-darkest">Tentang Kami</h2>
+      <p class="mt-4 text-slate-600">
+        AlanStack hadir untuk membantu Anda memiliki website profesional dengan cepat, 
+        modern, dan sesuai kebutuhan. Kami melayani pembuatan landing page, portofolio, 
+        hingga website bisnis lengkap dengan desain responsif.
+      </p>
+      <p class="mt-2 text-slate-600">
+        Tujuan kami adalah membuat kehadiran online Anda lebih kuat, baik untuk personal 
+        maupun bisnis, dengan biaya yang sederhana dan hasil maksimal.
+      </p>
+    </div>
+    <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-soft">
+      <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop" 
+           alt="Tentang AlanStack" class="w-full h-full object-cover"/>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950">Fitur yang Anda Butuhkan</h2>
+        <p class="mt-3 text-slate-utama">Cocok untuk event, layanan, produk, portofolio, maupun komunitas.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature item -->
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">1</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Desain Modern</h3>
+          <p class="mt-2 text-sm text-slate-utama">Tipografi rapi, spasi proporsional, dan komponen yang konsisten.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">2</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Responsif</h3>
+          <p class="mt-2 text-sm text-slate-utama">Tampil optimal di ponsel, tablet, dan desktop tanpa repot.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">3</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Siap Pakai</h3>
+          <p class="mt-2 text-sm text-slate-utama">Struktur seksinya umum: Hero, Fitur, Showcase, Harga, FAQ, Kontak.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">4</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Akses Cepat</h3>
+          <p class="mt-2 text-sm text-slate-utama">Sedikit aset, prioritas teks & ikon agar waktu muat lebih singkat.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">5</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Kustom Mudah</h3>
+          <p class="mt-2 text-sm text-slate-utama">Setiap website dibuat sesuai kebutuhan bisnis Anda — dari warna, tampilan, hingga fitur khusus.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft hover:shadow-lg transition-shadow">
+          <div class="h-10 w-10 rounded-lg bg-brand-utama text-white grid place-items-center">6</div>
+          <h3 class="mt-4 font-semibold text-slate-950">Kompatibel</h3>
+          <p class="mt-2 text-sm text-slate-utama">Cocok dipakai di static hosting (Netlify, Vercel, GitHub Pages).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOWCASE / USE CASES ============ -->
+  <section id="showcase" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950">Refrensi Website </h2>
+          <p class="mt-3 text-slate-utama">Beberapa jenis website yang bisa kami buat sesuai kebutuhan bisnis dan personal Anda.</p>
+        </div>
+        <a href="#cta" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 hover:border-brand-base">Dapatkan Template</a>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://s3-alpha.figma.com/hub/file/6289295399/79cb2639-6844-4824-bdc1-dce9cc794403-cover.png" alt="e-commerce"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Toko Online</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Website e-commerce dengan katalog produk, keranjang belanja, dan integrasi pembayaran.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://mycoding.id/storage/screenshots/92-0.jpg?v=2025" alt="Compony Profile"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Company Profile</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Situs resmi perusahaan yang menampilkan visi, layanan, portofolio, dan kontak bisnis.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://mataramweb.com/wp-content/uploads/2023/03/jackson-free-personal-resume-website-template.jpg.webp" alt="Produk Digital"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Portofolio Kreatif</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Website personal untuk menampilkan karya fotografer, desainer, atau freelancer.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://www.templateshub.net/uploads/musicthumb.jpg" alt="Portofolio"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Landing Page Event</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Halaman promosi event dengan detail acara, tiket, pembicara, dan formulir registrasi.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://www.jagoanhosting.com/blog/wp-content/uploads/2023/08/contoh-blog-bisnis-spi.png" alt="Komunitas"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Blog Bisnis</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Website dengan artikel & update terbaru untuk membangun brand authority dan SEO.</p>
+          </div>
+        </article>
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="h-full w-full object-cover group-hover:scale-105 transition" src="https://htmlburger.com/blog/wp-content/uploads/2024/02/startup-websites.png" alt="Startup"/>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-slate-950">Startup & Komunitas</h3>
+            <p class="mt-1.5 text-sm text-slate-utama">Website modern untuk memperkenalkan ide startup atau menghubungkan anggota komunitas.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950">Harga Sederhana</h2>
+        <p class="mt-3 text-slate-utama">Pilih paket sesuai kebutuhan. Bisa dipakai gratis, upgrade kapan saja.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+  <!-- Starter -->
+  <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft flex flex-col">
+    <h3 class="text-lg font-semibold text-slate-950">Starter</h3>
+    <p class="mt-1 text-sm text-slate-utama">Cocok untuk personal atau portofolio sederhana.</p>
+    <div class="mt-6 text-4xl font-extrabold">Rp499k<span class="text-base font-medium text-slate-500"> / sekali jadi</span></div>
+    <ul class="mt-6 space-y-2 text-sm text-slate-600">
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> 1 halaman landing page</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 "></span> Desain responsif (HP & desktop)</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Form kontak dasar</li>
+    </ul>
+    <a href="#cta" class="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-300 hover:border-brand-base">Pesan Paket Starter</a>
+  </div>
+
+  <!-- Business (Most Popular) -->
+  <div class="relative rounded-2xl border-2 border-brand-utama bg-white p-6 shadow-soft flex flex-col">
+    <span class="absolute -top-3 right-6 px-3 py-1 text-xs rounded-full bg-brand-utama text-white">Terpopuler</span>
+    <h3 class="text-lg font-semibold text-slate-950">Business</h3>
+    <p class="mt-1 text-sm text-slate-utama">Untuk UKM, toko online kecil, dan perusahaan jasa.</p>
+    <div class="mt-6 text-4xl font-extrabold">Rp1,5jt<span class="text-base font-medium text-slate-500"> / sekali jadi</span></div>
+    <ul class="mt-6 space-y-2 text-sm text-slate-600">
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Hingga 5 halaman (Home, About, Services, Contact, Blog)</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Form kontak aktif + integrasi WhatsApp</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> SEO dasar untuk pencarian Google</li>
+    </ul>
+    <a href="#cta" class="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-brand-utama text-white hover:bg-brand-hover">Pesan Paket Business</a>
+  </div>
+
+  <!-- Custom -->
+  <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft flex flex-col">
+    <h3 class="text-lg font-semibold text-slate-950">Custom</h3>
+    <p class="mt-1 text-sm text-slate-utama">Untuk startup, e-commerce, atau organisasi dengan kebutuhan khusus.</p>
+    <div class="mt-6 text-3xl font-extrabold">Hubungi Kami</div>
+    <ul class="mt-6 space-y-2 text-sm text-slate-600">
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Fitur sesuai kebutuhan</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Desain eksklusif</li>
+      <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Maintenance & support prioritas</li>
+    </ul>
+    <a href="#contact" class="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-300 hover:border-brand-base">Diskusi Paket Custom</a>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+ <section class="py-20 bg-white">
+  <h1 class="m-10 text-lg font-semibold text-slate-950 text-3xl sm:text-4xl text-center">Pendapat Mereka Tentang Kami</h1>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-6">
+      <blockquote class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <p class="text-slate-600">“Website bisnis saya jadi dalam waktu kurang dari 1 minggu. Prosesnya cepat dan komunikatif.”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Asep, Pemilik Toko Baju</footer>
+      </blockquote>
+      <blockquote class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <p class="text-slate-600">“Desain websitenya modern dan responsif. Setelah go live, penjualan online saya meningkat signifikan.”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Dadang, Freelancer Digital Marketing</footer>
+      </blockquote>
+      <blockquote class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <p class="text-slate-600">“Tim sangat membantu dari awal sampai akhir. Website komunitas kami jadi lebih rapi dan mudah diakses anggota.”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Sari, Founder Komunitas Edukasi</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============ CTA BANNER ============ -->
+  <section id="cta" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-brand-utama to-brand-dark p-8 md:p-12 text-white shadow-soft">
+        <div class="max-w-2xl">
+          <h3 class="text-2xl md:text-3xl font-bold">Siap membangun web responsif & cepat?</h3>
+          <p class="mt-2 text-white/90">Order sekarang atau Konsultasi terlebih dahulu.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-brand-dark hover:bg-brand-lightest">Konsultasi Sekarang</a>
+            <a href="#pricing" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/30 hover:bg-white/10">Lihat Paket</a>
+          </div>
+        </div>
+        <svg class="absolute -bottom-10 -right-10 h-40 w-40 opacity-20" viewBox="0 0 light light" xmlns="http://www.w3.org/light0/svg"><path fill="#fff" d="M40.9,-60.5C54.8,-52.2,68.1,-43,74.6,-30.3C81.1,-17.6,80.9,-1.4,77.4,14.5C73.9,30.5,67.1,46.3,55.5,56.5C43.9,66.7,27.6,71.3,11.4,71.7C-4.8,72.1,-21,68.2,-36.1,60.9C-51.1,53.7,-65,43.1,-72.1,29.1C-79.2,15.2,-79.5,-2.1,-73.4,-16.5C-67.3,-30.9,-54.7,-42.5,-41.2,-lightest.8C-27.7,-59.1,-13.9,-64.1,-0.3,-63.6C13.3,-63.1,26.6,-57.7,40.9,-60.5Z" transform="translate(lighter lighter)" /></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+ <section id="faq" class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950">Pertanyaan Umum</h2>
+      <p class="mt-3 text-slate-utama">Beberapa hal yang sering ditanyakan sebelum memesan website.</p>
+    </div>
+    <div class="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+      
+      <details class="group p-6 open:bg-white">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-slate-950 font-medium">
+          Berapa lama waktu pengerjaan website?
+          <span class="transition group-open:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </span>
+        </summary>
+        <p class="mt-2 text-sm text-slate-utama">
+          Tergantung paket yang dipilih. Landing page biasanya selesai 3–5 hari kerja, 
+          sedangkan website bisnis 1–2 minggu.
+        </p>
+      </details>
+      
+      <details class="group p-6 open:bg-white">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-slate-950 font-medium">
+          Apakah harga sudah termasuk domain dan hosting?
+          <span class="transition group-open:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </span>
+        </summary>
+        <p class="mt-2 text-sm text-slate-utama">
+          Paket harga hanya mencakup pembuatan website. Domain dan hosting bisa 
+          dibantu pembeliannya sesuai budget Anda.
+        </p>
+      </details>
+      
+      <details class="group p-6 open:bg-white">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-slate-950 font-medium">
+          Apakah saya bisa minta revisi desain?
+          <span class="transition group-open:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </span>
+        </summary>
+        <p class="mt-2 text-sm text-slate-utama">
+          Bisa. Setiap paket sudah termasuk 1–2 kali revisi untuk memastikan website 
+          sesuai kebutuhan Anda.
+        </p>
+      </details>
+      
+      <details class="group p-6 open:bg-white">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-slate-950 font-medium">
+          Apakah ada layanan maintenance setelah website jadi?
+          <span class="transition group-open:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </span>
+        </summary>
+        <p class="mt-2 text-sm text-slate-utama">
+          Ada. Kami menyediakan paket tambahan untuk maintenance dan update konten 
+          bulanan sesuai permintaan.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950">Kontak</h2>
+          <p class="mt-3 text-slate-utama">Butuh bantuan kustomisasi? Kirim pesan melalui form berikut.</p>
+          <div class="mt-6 space-y-3 text-sm text-slate-600">
+            <div class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l10 6 10-6"/><path d="M2 8l10 6 10-6v8l-10 6L2 16V8z"/></svg> hello@AlanStack.site</div>
+            <div class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.12.9.37 1.77.72 2.58a2 2 0 0 1-.45 2.11L10.91 11a16 16 0 0 0 6.09 6.09l1.59-1.45a2 2 0 0 1 2.11-.45c.81.35 1.68.6 2.58.72A2 2 0 0 1 22 16.92z"/></svg> +62 812-1111-1111</div>
+            <div class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Makassar, Indonesia</div>
+          </div>
+        </div>
+        <form class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft grid gap-4">
+          <div>
+            <label class="text-sm text-slate-600">Nama</label>
+            <input class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-base" placeholder="Nama lengkap"/>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-slate-600">Email</label>
+              <input type="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-base" placeholder="email@domain.com"/>
+            </div>
+            <div>
+              <label class="text-sm text-slate-600">Subjek</label>
+              <input class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-base" placeholder="Butuh kustomisasi"/>
+            </div>
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Pesan</label>
+            <textarea rows="5" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-base" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+          </div>
+          <button type="button" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-utama text-white hover:bg-brand-hover">Kirim Pesan</button>
+          <p class="text-xs text-slate-500">* Form dummy untuk demo. </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div>
+          <div class="inline-flex items-center gap-2 font-semibold text-slate-950">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-utama text-white">A</span>
+            AlanStack
+          </div>
+          <p class="mt-3 text-sm text-slate-utama">
+Layanan pembuatan website profesional — cepat, responsif, dan siap membantu bisnis Anda tampil online.
+</p>
+
+        </div>
+        <nav class="grid sm:grid-cols-3 gap-6 text-sm">
+          <div>
+            <h4 class="font-semibold text-slate-950">Produk</h4>
+            <ul class="mt-3 space-y-2 text-slate-utama">
+              <li><a href="#features" class="hover:text-brand-hover">Fitur</a></li>
+              <li><a href="#showcase" class="hover:text-brand-hover">Showcase</a></li>
+              <li><a href="#pricing" class="hover:text-brand-hover">Harga</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-slate-950">Perusahaan</h4>
+            <ul class="mt-3 space-y-2 text-slate-utama">
+              <li><a href="#faq" class="hover:text-brand-hover">FAQ</a></li>
+              <li><a href="#contact" class="hover:text-brand-hover">Kontak</a></li>
+              <li><a href="#" class="hover:text-brand-hover">Kebijakan</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-slate-950">Ikuti Kami</h4>
+            <ul class="mt-3 space-y-2 text-slate-utama">
+              <li><a href="#" class="hover:text-brand-hover">Instagram</a></li>
+              <li><a href="#" class="hover:text-brand-hover">YouTube</a></li>
+              <li><a href="#" class="hover:text-brand-hover">LinkedIn</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="md:text-right text-sm text-slate-500">© 2025 AlanStack. Semua hak cipta.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
