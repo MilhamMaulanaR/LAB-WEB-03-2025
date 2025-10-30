@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="game-info">
+    <h1>UNO Game</h1>
+  </header>
+
+  <main id="layout">
+    <!-- BOARD / ARENA -->
+    <section id="board" class="">
+      <div id="bot-hand" class="hand-area"></div>
+
+      <div class="center-area">
+        <div id="deck-pile" class="card-pile">
+          <img src="assets/card_back.png" alt="Deck">
+        </div>
+        <div id="discard-pile" class="card-pile"></div>
+      </div>
+
+      <div id="player-hand" class="hand-area"></div>
+    </section>
+
+    <!-- SIDEBAR KANAN -->
+    <aside id="right-bar" aria-label="Panel kanan">
+      <div class="panel">
+        <h3>Status & Kontrol</h3>
+
+        <div class="stat">
+          <div>Saldo</div>
+          <div id="player-balance">$5000</div>
+        </div>
+        <div class="stat">
+          <div>Taruhan</div>
+          <div id="current-bet">$0</div>
+        </div>
+
+        <label class="bet-label" for="bet-amount-side">Taruhan (Min $100)</label>
+        <div class="bet-row">
+          <input type="number" id="bet-amount-side" value="100" min="100" step="100">
+          <button id="start-round-btn" class="primary">Mulai Ronde</button>
+        </div>
+
+        <button id="uno-btn" class="uno-btn hidden">UNO!</button>
+
+        <h4 class="log-title">Log Aksi</h4>
+        <div id="log-area" class="log" aria-live="polite"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- COLOR PICKER MODAL -->
+  <div id="color-picker-modal" class="modal-overlay">
+    <div class="modal-content">
+      <h3>Pilih Warna</h3>
+      <div class="color-options">
+        <div class="color-box red" data-color="red"></div>
+        <div class="color-box green" data-color="green"></div>
+        <div class="color-box blue" data-color="blue"></div>
+        <div class="color-box yellow" data-color="yellow"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME OVER MODAL -->
+  <div id="game-over-screen" class="modal-overlay">
+    <div class="modal-content">
+      <h2>Game Over</h2>
+      <p>Sayang sekali, saldo Anda habis!</p>
+      <button id="restart-game-btn">Mulai Ulang</button>
+    </div>
+  </div>
+    <script src="Main.js"></script>
+</body>
+</html>
