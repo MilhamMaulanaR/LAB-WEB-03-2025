@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movie Time - Tonton di Mana Saja</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+	</head>
+	<body class="bg-black font-sans text-white">
+
+		<header
+			class="relative flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center px-4 text-center"
+			style="
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+			"
+		>
+
+		<img src="bg tp2.webp" alt="Background Image" class="absolute inset-0 h-full w-full object-cover opacity-60" />
+
+			<nav class="absolute top-0 left-0 z-20 flex w-full items-center justify-between p-6">
+				<h1 class="text-lg font-bold uppercase tracking-wider text-[#E50914] md:text-4xl">Movie Time</h1>
+				<div class="hidden items-center space-x-6 text-lg font-semibold md:flex ">
+					<a href="#about" class="hover:text-[#E50914]">Tentang</a>
+					<a href="#daftar-film" class="hover:text-[#E50914]">Daftar Film</a>
+					<a href="#features" class="hover:text-[#E50914]">Layanan</a>
+					<a href="#contact" class="hover:text-[#E50914]">Kontak</a>
+				</div>
+			</nav>
+
+			<div class="relative z-10 mx-auto w-full max-w-xl text-center md:max-w-4xl">
+				<h2 class="text-4xl font-extrabold md:text-5xl lg:text-6xl">WELCOME TO MOVIE TIME</h2>
+				<p class="mt-4 font-bold md:text-xl lg:text-2xl">Tonton film dan acara TV eksklusif di mana saja, kapan saja!</p>
+					 <a href="#daftar-film" class="mt-8 inline-block rounded-lg bg-[#E50914] px-8 py-3 text-xl font-bold uppercase text-white transition duration-300 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-900">
+                    Mulai Nonton
+                </a>
+			</div>
+		</header>
+
+		<main>
+			<section id="about" class="py-16 text-center">
+				<div class="container mx-auto max-w-4xl px-6">
+					<img src="logo.png" alt="Logo Movie Time" class="mx-auto mb-6 w-60" />
+					<h2 class="mb-4 text-3xl font-bold">Tentang Movie Time</h2>
+					<p class="text-gray-400">Movie Time adalah sebuah platform revolusioner yang terinspirasi dari Netflix, dirancang untuk memenuhi tuprak 2.</p>
+				</div>
+			</section>
+
+			<div class="h-2 w-full bg-gray-800"></div>
+
+			<section id="daftar-film" class="container mx-auto py-12 px-4">
+				<h2 class="mb-8 text-center text-3xl font-bold">Daftar Film</h2>
+				<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+					<a href="https://youtu.be/ueCc-AYUMRs" target="_blank" class="z-10 block flex h-72 w-full items-center justify-center overflow-hidden rounded-lg bg-black shadow-lg">
+						<img src="wednesday.jpg" alt="Wednesday Teaser" class="h-full w-full object-contain transition-transform duration-300 hover:scale-105" />
+					</a>
+					<a href="https://youtu.be/O76onpa-A7Y" target="_blank" class="z-10 block flex h-72 w-full items-center justify-不斷 justify-center overflow-hidden rounded-lg bg-black shadow-lg">
+						<img src="pabrik gula.jpg" alt="Pabrik Gula Teaser" class="h-full w-full object-contain transition-transform duration-300 hover:scale-105" />
+					</a>
+					<a href="https://youtu.be/BpvnEiG9bTE" target="_blank" class="z-10 block flex h-72 w-full items-center justify-center overflow-hidden rounded-lg bg-black shadow-lg">
+						<img src="komang.jpg" alt="Komang Teaser" class="h-full w-full object-contain transition-transform duration-300 hover:scale-105" />
+					</a>
+					<a href="https://youtu.be/Cy5aYBBE8G4" target="_blank" class="z-10 block flex h-72 w-full items-center justify-center overflow-hidden rounded-lg bg-black shadow-lg">
+						<img src="rua.jpg" alt="Rua Teaser" class="h-full w-full object-contain transition-transform duration-300 hover:scale-105" />
+					</a>
+					<a href="https://youtu.be/bMgfsdYoEEo" target="_blank" class="z-10 block flex h-72 w-full items-center justify-center overflow-hidden rounded-lg bg-black shadow-lg">
+						<img src="theconjuring.jpg" alt="The Conjuring Teaser" class="h-full w-full object-contain transition-transform duration-300 hover:scale-105" />
+					</a>
+				</div>
+			</section>
+
+			<div class="h-2 w-full bg-gray-800"></div>
+
+			<section id="features" class="container mx-auto py-16 px-6">
+				<h2 class="mb-8 text-center text-3xl font-bold">Fitur</h2>
+
+				<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+					<div class="rounded-lg border border-gray-700 bg-gray-900 p-6">
+						<h3 class="mb-2 text-2xl font-bold">Nikmati di Device-mu</h3>
+						<p class="text-gray-400">Tonton di Smart TV,Smartphone, Xbox, Apple TV dan banyak lagi.</p>
+					</div>
+
+					<div class="rounded-lg border border-gray-700 bg-gray-900 p-6">
+						<h3 class="mb-2 text-2xl font-bold">Download acara TV untuk menontonnya secara offline</h3>
+						<p class="text-gray-400">Simpan favoritmu dengan mudah agar selalu ada acara TV dan film yang bisa ditonton.</p>
+					</div>
+
+					<div class="rounded-lg border border-gray-700 bg-gray-900 p-6">
+						<h3 class="mb-2 text-2xl font-bold">Tonton di mana pun</h3>
+						<p class="text-gray-400">Streaming film dan acara TV tak terbatas di ponsel, tablet, laptop, dan TV-mu.</p>
+					</div>
+
+					<div class="rounded-lg border border-gray-700 bg-gray-900 p-6">
+						<h3 class="mb-2 text-2xl font-bold">Buat profil untuk anak</h3>
+						<p class="text-gray-400">Kirim anak-anak untuk bertualang bersama karakter favorit di dunia yang dibuat khusus untuk mereka—gratis dengan keanggotaanmu.</p>
+					</div>
+
+				</div>
+				
+			</section>
+
+			<div class="h-2 w-full bg-gray-800"></div>
+
+			<section class="container mx-auto py-16 px-6">
+
+				<div class="mb-12 text-center">
+					<h2 class="mb-8 text-center text-3xl font-bold">Apa Kata Mereka</h2>
+				</div>
+
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+					<div class="rounded-xl border border-gray-700 bg-gray-900 p-6">
+						<p class="text-gray-300">"Koleksi filmnya luar biasa! Saya tidak pernah kehabisan tontonan di akhir pekan. <span class="text-red-500 underline decoration-2">Kualitas streamingnya juga sangat jernih</span>. Sangat direkomendasikan! 👍"</p>
+						<p class="mt-4 font-bold text-white">- Atika.</p>
+					</div>
+					<div class="rounded-xl border border-gray-700 bg-gray-900 p-6">
+						<p class="text-gray-300">"Sebagai pecinta film klasik, saya senang sekali menemukan banyak judul langka di sini. <span class="text-red-500 underline decoration-2">Fitur profil anak juga sangat membantu</span> untuk tontonan keluarga."</p>
+						<p class="mt-4 font-bold text-white">- Budi Santoso</p>
+					</div>
+					<div class="rounded-xl border border-gray-700 bg-gray-900 p-6">
+						<p class="text-gray-300">"Awalnya ragu, tapi setelah coba seminggu, saya langsung langganan. <span class="text-red-500 underline decoration-2">Tidak ada iklan sama sekali</span>, pengalaman menonton jadi sangat nyaman. 🤩"</p>
+						<p class="mt-4 font-bold text-white">- Citra Lestari</p>
+					</div>
+					<div class="rounded-xl border border-gray-700 bg-gray-900 p-6 md:col-span-2 lg:col-span-1">
+						<p class="text-gray-300">"Saya bisa download film favorit dan menontonnya di perjalanan tanpa boros kuota. <span class="text-red-500 underline decoration-2">Ini fitur yang mengubah segalanya bagi saya</span>. Terima kasih Movie Time! ❤️"</p>
+						<p class="mt-4 font-bold text-white">- David H.</p>
+					</div>
+					<div class="rounded-xl border border-gray-700 bg-gray-900 p-6 lg:col-span-2">
+						<p class="text-gray-300">"Antarmukanya sangat mudah digunakan, bahkan untuk orang seperti saya yang tidak terlalu paham teknologi. Mencari film berdasarkan genre atau aktor jadi sangat cepat. <span class="text-red-500 underline decoration-2">Sangat intuitif dan desainnya elegan</span>."</p>
+						<p class="mt-4 font-bold text-white">- Elina Wijaya</p>
+					</div>
+
+				</div>
+
+			</section>
+
+			<div class="h-2 w-full bg-gray-800"></div>
+
+			<section class="container mx-auto py-16 px-6">
+
+				<div class="mx-auto max-w-2xl text-center">
+					<h2 class="mb-4 text-3xl font-bold">Hubungi Kami</h2>
+					<p class="mb-8 text-gray-400">Ada pertanyaan atau masukan? Jangan ragu untuk mengisi form di bawah ini.</p>
+				</div>
+
+				<form class="mx-auto max-w-2xl space-y-6">
+					<div>
+						<label for="name" class="mb-2 block text-sm font-medium text-gray-300">Nama Lengkap</label>
+						<input type="text" id="name" class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-red-500 focus:ring-red-500" placeholder="John Doe" required />
+					</div>
+					<div>
+						<label for="email" class="mb-2 block text-sm font-medium text-gray-300">Alamat Email</label>
+						<input type="email" id="email" class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-red-500 focus:ring-red-500" placeholder="you@example.com" required />
+					</div>
+					<div>
+						<label for="message" class="mb-2 block text-sm font-medium text-gray-300">Pesan Anda</label>
+						<textarea id="message" rows="6" class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-red-500 focus:ring-red-500" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+					</div>
+					<button type="submit" class="w-full rounded-lg bg-[#E50914] px-5 py-3 text-center font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-900">Kirim Pesan</button>
+				</form>
+			</section>
+		</main>
+
+		<footer id="contact" class="bg-gray-900 py-8">
+			<div class="container mx-auto px-6 text-center text-gray-400">
+				<div class="mb-4 flex justify-center space-x-6 text-lg">
+					<a href="https://www.facebook.com/nurul.fahirah.3158?locale=id_ID" target="_blank" class="font-semibold transition-colors duration-300 hover:text-white">Facebook</a>
+					<a href="https://x.com/NurulFahirah8" target="_blank" class="font-semibold transition-colors duration-300 hover:text-white">Twitter</a>
+					<a href="https://www.instagram.com/nurulfahirah4/" target="_blank" class="font-semibold transition-colors duration-300 hover:text-white">Instagram</a>
+				</div>
+
+				<div class="my-4 flex justify-center space-x-4 text-sm">
+					<a href="#" class="hover:text-white">Kebijakan Privasi</a>
+					<span>•</span>
+					<a href="#" class="hover:text-white">Syarat & Ketentuan</a>
+				</div>
+
+				<p class="text-sm">&copy; 2025 Movie Time. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
