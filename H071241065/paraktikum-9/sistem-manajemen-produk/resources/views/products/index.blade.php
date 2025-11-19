@@ -1,0 +1,53 @@
+@extends('layouts.app')
+
+@section('title', 'Manajemen Produk')
+
+@section('content')
+  <a href="{{ route('products.create') }}"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">
+    Tambah Produk Baru
+  </a>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">No</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama Produk</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kategori</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Harga</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        @forelse ($products as $key => $product)
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">{{ $key + 1 }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ $product->name }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              {{ optional($product->category)->name ?? 'Tidak ada kategori' }}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">Rp {{ number_format($product->price, 2, ',', '.') }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <a href="{{ route('products.show', $product->id) }}"
+                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Show</a>
+              <a href="{{ route('products.edit', $product->id) }}"
+                class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+
+              <form action="{{ route('products.destroy', $product->id) }}" method="POST" class="inline-block">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  onclick="return confirm('Yakin ingin menghapus?')">Hapus</button>
+              </form>
+            </td>
+          </tr>
+        @empty
+          <tr>
+            <td colspan="5" class="px-6 py-4 text-center">Tidak ada data.</td>
+          </tr>
+        @endforelse
+      </tbody>
+    </table>
+  </div>
+@endsection
